@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(int argc, char *argv[])
+
+{
+
+    FILE* fichier = NULL;
+
+    int score[2] = {0}; // Tableau des 3 meilleurs scores
+
+ 
+
+    fichier = fopen("map_1", "r");
+
+ 
+
+    if (fichier != NULL)
+
+    {
+
+        fscanf(fichier, "%d x %d", &score[0], &score[1]);
+
+        printf("Les meilleurs scores sont : %d, %d, score[0], score[1]");
+
+ 
+
+        fclose(fichier);
+
+    }
+
+ 
+
+    return 0;
+
+}
